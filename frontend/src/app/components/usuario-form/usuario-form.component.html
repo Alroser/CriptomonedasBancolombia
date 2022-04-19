@@ -1,0 +1,122 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Crypto Applicaction</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id=usuario-form routerLink="/usuario-form/{{getUser()}}">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id=pais-form routerLink="/pais-form/{{getUser()}}">Paises</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id=gestora-form routerLink="/gestora-form/{{getUser()}}">Gestoras</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h5>Mis monedas</h5>
+
+    <button type="button" id= "btn-1"  style="float: right" class="btn btn-primary" (click)="openModal()">AGREGAR MONEDA</button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Listado de monedas</h5>
+        <button type="submit" class="close" data-dismiss="modal" aria-label="Close" (click)="doSomething()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <select [(ngModel)]="usuSelected"  (ngModelChange)="onMonedaSelected($event)" class="form form-select" aria-label=".form-select-sm example">
+          <option selected disabled>--Seleccione una moneda--</option>
+          <option *ngFor="let mondispo of mondispo" [value]="mondispo.id_moneda">{{mondispo.nombre_moneda}}</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button [(ngModel)]="usuSelected"  ngDefaultControl type="button" class="btn btn-primary1"  (click)="insertusuario(usuSelected)">Guardar</button>
+        <button  type="button" class="btn btn-primary2" (click)="doSomething()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Simbolo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tasa de cambio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuarios of usuarios" (click)="editarUsuario(usuarios.id_moneda)">
+        <th scope="row">{{usuarios.id_moneda}}</th>
+        <td>{{usuarios.simbolo_moneda}}</td>
+        <td>{{usuarios.nombre_moneda}}</td>
+        <td>{{usuarios.valor_moneda}}</td>
+        <td>
+            <fa-icon  type="submit" id= "btn-edit"class="btn btn-update" [icon]="faPenToSquare" (click)="openModalUpd()"></fa-icon>
+            <fa-icon type="submit" id="btn-eliminar"class="btn btn-delete" [icon]="faTrashCan" (click)="deleteUsuario(usuarios.id_moneda)"></fa-icon>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Actualizar moneda</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="doSomething()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group" id="listado">
+            <label for="recipient-name" class="col-form-label">Tasa de cambio</label>
+            <input  *ngFor="let mondispo of mondispo" id="recipient-name" [value]="mondispo.valor_moneda"  name="valor-moneda" 
+            type="text" class="form-control"  [(ngModel)]="monedas.valor_moneda">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" id="btn-guardar-moneda" class="btn btn-primary1" (click)="updateMoneda()">Guardar</button>
+        <button type="button" id="btn-cancelar-modal"class="btn btn-primary2" data-dismiss="modal"  (click)="doSomething()">Cancelar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,16 @@
+
+<div clas="row">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      
+      <!-- Login Form -->
+      <form class="form-login"  (submit)="addTask(id_usuario)">
+        <h5>Sign In</h5>
+        <input [(ngModel)]="login.user" autocomplete="off" type="text" id="login" class="fadeIn second" name="user name" placeholder="user name" #id_usuario >
+        <input [(ngModel)]="login.password" autocomplete="off" type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+        <input type="submit" class="btn-login" id="sigIn"  value="SIG IN" (click)="SigIn()">
+      </form>
+    </div>
+  </div>
+</div>
+

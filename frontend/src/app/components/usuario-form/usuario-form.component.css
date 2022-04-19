@@ -1,0 +1,176 @@
+.btn-primary {
+    /* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 2px 20px;
+
+
+width: 186px;
+height: 38px;
+left: 1069px;
+top: 254px;
+
+/* brand/secondary/yellow */
+
+background: #FDDA24;
+border-radius: 60px;
+
+
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+
+text-align: center;
+letter-spacing: -0.3px;
+
+color: #292929;
+}
+
+h5 {
+    
+    height: 23px;
+    left: 177px;
+    top: 265px;
+ 
+    font-size: 20px;
+    line-height: 23px;
+    color: #494949;
+}
+
+.table-content {
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    
+    position: absolute;
+    width: 1078px;
+    height: 235px;
+    left: 177px;
+    top: 344px;
+    }
+    th{
+    align-items: flex-start;
+    padding: 0px;
+    
+    position: static;
+    width: 1000px;
+    height: 16px;
+    left: 0px;
+    top: 0px;
+    
+    /* background/gray-brand-primary-02 */
+    
+    background: #F4F4F4;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+    }
+    
+    td {
+        /* Auto layout */
+    align-items: center;
+    padding: 0px;
+    
+    position: static;
+    width: 1078px;
+    height: 57px;
+    left: 0px;
+    top: 178px;
+    
+    background: #FFFFFF;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin: 0px 0px;
+    }
+    
+    hr{
+        position: absolute;
+    width: 1074.5px;
+    height: 0px;
+    left: 179px;
+    top: 304.5px;
+    
+    border: 1px solid #747272;
+    }   
+    
+   
+.modal-content {
+    height: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+}
+
+.modal-header {
+    
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+/* identical to box height, or 138% */
+
+    letter-spacing: -0.3px;
+
+    color: #000000;
+}
+
+
+
+.btn-primary1 {
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 2px 20px;
+
+
+
+/* brand/secondary/yellow */
+
+background: #FDDA24;
+border-radius: 60px;
+}
+
+.btn-primary2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px 20px;
+    border: 1px solid #2C2A29;
+    box-sizing: border-box;
+    border-radius: 60px;
+
+}
+
+.modal-title{
+    width: 155px;
+height: 22px;
+left: 590px;
+top: 295px;
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 138% */
+
+letter-spacing: -0.3px;
+
+color: #000000;
+}
+
